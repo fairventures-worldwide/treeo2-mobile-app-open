@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CameraOverlayGuide">
+        <attr name="label" format="string" />
+        <attr name="labelSize" format="float" />
+        <attr name="guidelineWidthPercentage" format="float" />
+        <attr name="guidelineHeightPercentage" format="float" />
+    </declare-styleable>
+</resources>

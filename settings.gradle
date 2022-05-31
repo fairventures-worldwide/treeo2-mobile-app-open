@@ -1,0 +1,6 @@
+include ':app'
+rootProject.name = "Treeo"
+
+include ':opencv'
+project(':opencv').projectDir = new File(rootDir.path + "/opencv/sdk")
+include ':java'

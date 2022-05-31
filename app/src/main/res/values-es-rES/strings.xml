@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TREEO</string>
+    <string name="logout_button_text">Log Out</string>
+    <string name="text_continue">Continuar</string>
+    <string name="text_treeo_goal">Proporcionamos plántulas, educamos y ayudamos a los agricultores a generar ingresos sostenibles mediante la plantación de árboles.</string>
+    <string name="text_create_a_better_income">Genere mejores ingresos plantando árboles</string>
+    <string name="get_started">EMPEZAR</string>
+    <string name="text_choose_language">Elija su idioma primero</string>
+    <string name="title_home">Casa</string>
+    <string name="title_guide">Guía</string>
+    <string name="title_learn">Aprender</string>
+    <string name="title_profile">Perfil</string>
+    <string name="text_back">ESPALDA</string>
+    <string name="hint_choose_language">Elija el idioma de la APLICACIÓN TREEO. Siempre puedes cambiarlo en la configuración.</string>
+    <string name="your_phone_number">Escriba su número de teléfono</string>
+    <string name="pick_your_country">Elige tu pais</string>
+    <string name="resend_the_passcode">VUELVA A ENVIAR LA CONTRASEÑA</string>
+    <string name="passcode_delay_text">Es posible que tarde un par de minutos en recibir el código de acceso.</string>
+    <string name="otp_pass_code_message">Confirme la contraseña enviada a</string>
+    <string name="gdpr_conditions">GDPR Conditions</string>
+    <string name="label_offline_information">Estás desconectado ahora. No se preocupe, la aplicación funciona sin conexión. En caso de recopilación de datos, conéctese a Internet para enviarnos datos.</string>
+    <string name="label_offline_mode">Estás usando el modo fuera de línea.</string>
+    <string name="label_data_to_send">Tienes datos para enviar. Conéctese a Internet para cargarlo.</string>
+    <string name="label_go_to_settings">IR A LA CONFIGURACIÓN</string>
+    <string name="label_unfinished_activity">Tienes una actividad sin terminar. Haga clic en Continuar para finalizarlo ahora.</string>
+    <string name="label_please_stay_connected">Por favor mantente conectado ...</string>
+    <string name="label_uploading_data_now">Estás cargando tus datos ahora. Dale unos segundos para terminar</string>
+    <string name="label_all_data_uploaded">Has subido correctamente todos tus datos.</string>
+</resources>

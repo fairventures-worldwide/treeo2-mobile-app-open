@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.registration.screens.UserActivationFragment">
+
+    <TextView
+        android:id="@+id/userActivationScreenMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:maxWidth="260dp"
+        android:text="@string/otp_pass_code_message"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/app_green"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="200dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/line_drawable"
+        app:layout_constraintStart_toStartOf="@+id/userActivationScreenMessageTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userActivationScreenMessageTextView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxWidth="220dp"
+        android:text="@string/passcode_delay_text"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <ProgressBar
+        android:id="@+id/userActivationOtpWaitProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <com.mukesh.OtpView
+        android:id="@+id/userActivationOtpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="72dp"
+        app:OtpItemCount="4"
+        app:OtpItemHeight="40dp"
+        app:OtpItemWidth="30dp"
+        app:OtpLineColor="@color/app_green"
+        app:OtpViewType="line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/userActivationResendPassCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/resend_the_passcode"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/link_color_state_list"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/userActivationOtpView"
+        app:layout_constraintStart_toStartOf="@+id/userActivationOtpView"
+        app:layout_constraintTop_toBottomOf="@+id/userActivationOtpView" />
+
+    <ProgressBar
+        android:id="@+id/userActivationOtpProgressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userActivationOtpView" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/llUserPhone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:layout_height="0dp"/>
+
+    <android.widget.Button
+        android:id="@+id/userActivationBackButton"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:layout_width="0dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/back_button_state_list"
+        android:drawableStart="@drawable/ic_arrow_back_16"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:text="@string/text_back"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textColor="@color/app_green"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+            <View
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:maxWidth="280dp"
+        android:text="@string/which_organization_are_you_register_in"
+        android:textAppearance="@style/HeadlineTheme"
+        android:textColor="@color/app_green"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="150dp"
+        android:layout_height="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/line_drawable"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/instructions_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxWidth="140dp"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:text="@string/choose_one_or_more_relevant_options"
+        android:textAppearance="@style/TextTheme"
+        android:textColor="@color/gray_20"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <ProgressBar
+        android:id="@+id/projectsListProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="90dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_text1" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="15dp"
+        android:foregroundGravity="center"
+        android:id="@+id/rvOrganizations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llUserPhone"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_text1" />
+
+    <LinearLayout
+        android:id="@+id/llUserPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.2" />
+
+
+        <android.widget.Button
+            android:id="@+id/project_btn_continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/button_state_list"
+            android:drawableEnd="@drawable/ic_arrow_forward_16"
+            android:drawablePadding="5dp"
+            android:enabled="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/text_continue"
+            android:textAppearance="@style/TextThemeButton"
+            android:textColor="@color/text_color_state_list" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.2" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

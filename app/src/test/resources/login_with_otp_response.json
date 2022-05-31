@@ -1,0 +1,9 @@
+{
+  "data": {
+    "username": "test",
+    "email": "test@email.com",
+    "userId": 10,
+    "token": "this_is_a_dummy_token"
+  },
+  "message": "success"
+}

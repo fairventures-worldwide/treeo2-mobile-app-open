@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/chooseLangImageView"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/treeo_logo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <TextView
+            android:id="@+id/title_choose_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:maxWidth="340dp"
+            android:text="@string/text_choose_language"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textColor="@color/app_green"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseLangImageView" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/line_drawable"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_choose_language" />
+
+        <TextView
+            android:id="@+id/choose_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxWidth="280dp"
+            android:text="@string/hint_choose_language"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checkedButton="@+id/radio_button_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_language"
+            app:layout_constraintVertical_bias="0.2">
+
+            <RadioButton
+                android:id="@+id/radio_english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/united_kingdom_flag_xs"
+                android:drawablePadding="10dp"
+                android:text="@string/english"
+                android:textColor="#DE000000"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_luganda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/uganda_flag_xs"
+                android:drawablePadding="10dp"
+                android:text="@string/luganda"
+                android:textColor="#DE000000"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_bahasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/indonesia_flag_xs"
+                android:drawablePadding="11dp"
+                android:text="@string/bahasa"
+                android:textColor="#DE000000"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_spanish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/spain_flag_xs"
+                android:drawablePadding="10dp"
+                android:text="@string/spanish"
+                android:textColor="#DE000000"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <android.widget.Button
+            android:id="@+id/chooseLangContinueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_state_list"
+            android:drawableEnd="@drawable/ic_arrow_forward_16"
+            android:drawablePadding="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/text_continue"
+            android:textColor="@color/text_color_state_list"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

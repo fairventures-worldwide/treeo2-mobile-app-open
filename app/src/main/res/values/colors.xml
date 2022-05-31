@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#00802B</color>
+    <color name="gray">#646567</color>
+    <color name="gray_20">#282621</color>
+    <color name="app_green">#00601E</color>
+    <color name="app_green_darker">#013712</color>
+    <color name="mint_green">#E9F3EC</color>
+    <color name="disabled_green_text">#7B9684</color>
+    <color name="disabled_green">#E9F3EC</color>
+    <color name="app_green_20">#2000802B</color>
+    <color name="app_orange_50">#C44419</color>
+    <color name="app_yellow_100">#FFF3D7</color>
+    <color name="app_yellow_50">#856E00</color>
+    <color name="app_orange">#DF4F1E</color>
+    <color name="app_orange2">#F18965</color>
+    <color name="app_orange_20">#FCEDE8</color>
+    <color name="app_background_color">#FFFDF9</color>
+    <color name="red_90">#FFD6D7</color>
+    <color name="yellow_50">#856E00</color>
+    <color name="app_light_blue">#4D007DFF</color>
+    <color name="red_40">#FFA9001E</color>
+    <color name="app_dark_blue">#FF19577C</color>
+    <color name="app_light_yellow">#FFFCF4DB</color>
+    <color name="app_dark_yellow">#FFD9A810</color>
+    <color name="gray_3">#746F63</color>
+    <color name="orange_100">#FEF1EE</color>
+    <color name="orange_50">#D94D1C</color>
+    <color name="grey_90">#E7DFCD</color>
+    <color name="gray_90">#E7DFCD</color>
+    <color name="gray_40">#565249</color>
+    <color name="app_red_40">#A9001E</color>
+    <color name="gray_80">#CEC6B2</color>
+</resources>

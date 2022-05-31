@@ -1,0 +1,244 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    signingConfigs {
+        Release {
+            storeFile file('/Users/ivanpaul/DATA/treeo2-mobile-app/Keystore')
+            storePassword 'RIp0772466608*'
+            keyAlias 'key0'
+            keyPassword 'RIp0772466608*'
+        }
+    }
+
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "org.treeo.treeo"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 29
+        versionName "4.4.3"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions "
+                cppFlags += "-I${file(rootDir.path + "/opencv/sdk/native/jni/include")}".toString()
+                cppFlags += "-I${file(rootDir.path + "/opencv/sdk/native/jni/include/opencv2")}".toString()
+
+                abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+                arguments "-DOpenCV_DIR=" + rootDir.path + "/opencv/sdk/native"
+            }
+        }
+        ndk {
+            abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['jniLibs']
+            jni {
+                srcDirs 'src/main/jni', 'src/main/jniLibs'
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    ndkVersion '23.0.7599858'
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':opencv')
+
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.1.5"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // recycler selection
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
+
+    // Firebase Bom
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+
+    // Firebase Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // Firebase Crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+    // Room
+    def room_version = "2.4.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
+    // Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+
+    // Coroutine Testing
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1-native-mt"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1-native-mt"
+
+    // Dagger - Hilt
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-android-compiler:2.38.1"
+
+    // Hilt work manager support
+    implementation 'androidx.hilt:hilt-work:1.0.0'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    // Test Rule
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+
+    // Espresso Contrib
+    androidTestImplementation('com.android.support.test.espresso:espresso-contrib:3.0.2') {
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+
+    // Arch core testing (Instant task executor rule)
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    // Truth assertion library
+    testImplementation "com.google.truth:truth:1.0.1"
+
+    // Instant task executor rules
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    // Ads Identifier
+    implementation 'androidx.ads:ads-identifier:1.0.0-alpha04'
+
+    // Guava Used for the calls to addCallback()
+    implementation 'com.google.guava:guava:28.0-android'
+
+    // Play Services auth component for SMS Retriever
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+
+    // Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+    androidTestImplementation "androidx.navigation:navigation-testing:2.3.5"
+
+    // CameraX core library using camera2 implementation
+    implementation "androidx.camera:camera-camera2:1.1.0-beta01"
+    // CameraX Lifecycle Library
+    implementation "androidx.camera:camera-lifecycle:1.1.0-beta01"
+    // CameraX View class
+    implementation "androidx.camera:camera-view:1.1.0-beta01"
+
+    // Easy Permissions KTX
+    implementation 'com.vmadalin:easypermissions-ktx:0.1.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+
+    // OTP View
+    implementation "com.github.mukeshsolanki:android-otpview-pinview:2.1.2"
+
+    // Viewpager Indicator
+    implementation "com.shuhart.stepview:stepview:1.5.1"
+
+    // Localization
+    implementation 'com.akexorcist:localization:1.2.9'
+
+    // Location
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    // OkHTTP3 logging interceptor and mock-webserver
+    def okHttp3_version = "4.9.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3_version"
+    implementation "com.squareup.okhttp3:mockwebserver:$okHttp3_version"
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+
+    // Work Manager
+    def work_version = "2.8.0-alpha01"
+    implementation("androidx.work:work-runtime-ktx:$work_version")
+
+    // Image compressor
+    implementation "id.zelory:compressor:3.0.0"
+
+    // Fragment view-binding one-liner
+    implementation 'com.github.Zhuinden:fragmentviewbindingdelegate-kt:1.0.0'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+}

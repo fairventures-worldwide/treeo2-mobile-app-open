@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/flashOn"
+        android:icon="@drawable/ic_baseline_flash_on_24"
+        android:iconTint="@color/green"
+        android:title="@string/flash_on"
+        android:visible="false"
+        app:showAsAction="ifRoom"
+        tools:ignore="UnusedAttribute" />
+    <item
+        android:id="@+id/flashOff"
+        android:icon="@drawable/ic_baseline_flash_off_24"
+        android:title="@string/flash_off"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.treemeasurement.screens.dialogs.ProcessingImageDialog">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/online_with_sync_in_progress"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/processingImageLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:maxWidth="235dp"
+                android:text="@string/prompt_for_exit"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="31dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="0.5"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="25dp"
+                    android:text="@string/cancel"
+                    android:textAppearance="@style/TextThemeButton"
+                    android:textColor="@color/app_green"
+                    android:textSize="12sp" />
+
+                <android.widget.Button
+                    android:id="@+id/pause"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/app_green"
+                    android:drawablePadding="8dp"
+                    android:text="@string/pause"
+                    android:textAppearance="@style/TextThemeButton"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <android.widget.Button
+                    android:id="@+id/finish"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/app_green"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/save_and_exit"
+                    android:textAppearance="@style/TextThemeButton"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

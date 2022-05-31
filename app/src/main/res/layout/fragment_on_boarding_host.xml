@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color"
+    tools:context=".ui.authentication.onboarding.OnBoardingHostFragment">
+
+    <TextView
+        android:id="@+id/chooseLangImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Introduction"
+        android:textSize="24sp"
+        android:layout_marginStart="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/app_green"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/onBoardingIndicatorView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseLangImageView"
+        app:sv_animationType="All"
+        app:sv_doneCircleColor="@color/app_green"
+        app:sv_doneCircleRadius="8dp"
+        app:sv_doneStepLineColor="@color/app_green"
+        app:sv_doneStepMarkColor="@android:color/white"
+        app:sv_doneTextColor="@android:color/white"
+        app:sv_nextStepCircleColor="@color/app_green_20"
+        app:sv_nextStepCircleEnabled="true"
+        app:sv_nextStepLineColor="@color/app_green_20"
+        app:sv_selectedCircleColor="@color/app_green"
+        app:sv_selectedCircleRadius="8dp"
+        app:sv_selectedStepNumberColor="@android:color/white"
+        app:sv_stepNumberTextSize="8sp"
+        app:sv_stepPadding="2dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onBoardingViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onBoardingIndicatorView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

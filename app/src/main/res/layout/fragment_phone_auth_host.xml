@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.login.PhoneAuthHostFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/treeo_logo" />
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/phoneRegistrationIndicatorView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:sv_animationType="All"
+        app:sv_doneCircleColor="@color/app_green"
+        app:sv_doneCircleRadius="8dp"
+        app:sv_doneStepLineColor="@color/app_green"
+        app:sv_doneStepMarkColor="@android:color/white"
+        app:sv_doneTextColor="@android:color/white"
+        app:sv_nextStepCircleColor="@color/app_green_20"
+        app:sv_nextStepCircleEnabled="true"
+        app:sv_nextStepLineColor="@color/app_green_20"
+        app:sv_selectedCircleColor="@color/app_green"
+        app:sv_selectedCircleRadius="8dp"
+        app:sv_selectedStepNumberColor="@android:color/white"
+        app:sv_stepNumberTextSize="8sp"
+        app:sv_stepPadding="2dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/phoneAuthViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneRegistrationIndicatorView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

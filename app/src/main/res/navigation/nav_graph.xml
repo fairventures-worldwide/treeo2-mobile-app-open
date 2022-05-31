@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/onBoardingHostFragment"
+        android:name="org.treeo.treeo.ui.authentication.onboarding.OnBoardingHostFragment"
+        android:label="OnBoarding"
+        tools:layout="@layout/fragment_on_boarding_host">
+        <action
+            android:id="@+id/action_onBoardingHostFragment_to_onBoardingLandingPage"
+            app:destination="@id/onBoardingLandingPage"
+            app:popUpTo="@id/onBoardingLandingPage" />
+        <action
+            android:id="@+id/action_onBoardingHostFragment_to_motivationsFragment"
+            app:destination="@id/motivationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingLandingPage"
+        android:name="org.treeo.treeo.ui.authentication.onboarding.screens.OnBoardingLandingPage"
+        android:label="fragment_on_boarding_landing_page"
+        tools:layout="@layout/fragment_on_boarding_landing_page">
+        <action
+            android:id="@+id/action_onBoardingLandingPage_to_onBoardingHostFragment"
+            app:destination="@id/onBoardingHostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLangFragment"
+        android:name="org.treeo.treeo.ui.authentication.onboarding.screens.ChooseLangFragment"
+        android:label="ChooseLangFragment">
+        <action
+            android:id="@+id/action_chooseLangFragment_to_onBoardingScreen1"
+            app:destination="@id/onBoardingLandingPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="org.treeo.treeo.ui.home.screens.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_chooseLangFragment"
+            app:destination="@id/chooseLangFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_phoneAuthHostFragment"
+            app:destination="@id/phoneAuthHostFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_activityDetailsFragment"
+            app:destination="@id/activitySummaryFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="org.treeo.treeo.ui.home.screens.GuideFragment"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide">
+        <action
+            android:id="@+id/action_guideFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment" />
+        <action
+            android:id="@+id/action_guideFragment_to_activityDetailsFragment"
+            app:destination="@id/activitySummaryFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="org.treeo.treeo.ui.home.screens.LearnFragment"
+        android:label="fragment_learn"
+        tools:layout="@layout/fragment_learn" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="org.treeo.treeo.ui.home.screens.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_termsFragment2"
+            app:destination="@id/termsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneAuthHostFragment"
+        android:name="org.treeo.treeo.ui.authentication.login.PhoneAuthHostFragment"
+        android:label="fragment_phone_auth_host"
+        tools:layout="@layout/fragment_phone_auth_host">
+        <action
+            android:id="@+id/action_phoneAuthHostFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="org.treeo.treeo.ui.measure.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/registrationHostFragment"
+        android:name="org.treeo.treeo.ui.authentication.registration.RegistrationHostFragment"
+        android:label="fragment_registration_host"
+        tools:layout="@layout/fragment_registration_host">
+        <action
+            android:id="@+id/action_registrationHostFragment_to_motivationsFragment"
+            app:destination="@id/motivationsFragment" />
+        <action
+            android:id="@+id/action_registrationHostFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_registrationHostFragment_to_phoneAuthHostFragment"
+            app:destination="@id/phoneAuthHostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/motivationsFragment"
+        android:name="org.treeo.treeo.ui.authentication.onboarding.screens.MotivationsFragment"
+        android:label="fragment_motivations"
+        tools:layout="@layout/fragment_motivations">
+        <action
+            android:id="@+id/action_motivationsFragment_to_registrationHostFragment"
+            app:destination="@id/registrationHostFragment" />
+        <action
+            android:id="@+id/action_motivationsFragment_to_onBoardingHostFragment"
+            app:destination="@id/onBoardingHostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaireFragment"
+        android:name="org.treeo.treeo.ui.questionnaire.screens.QuestionnaireFragment"
+        android:label="fragment_questionnaire"
+        tools:layout="@layout/fragment_questionnaire">
+        <action
+            android:id="@+id/action_questionnaireFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activitySummaryFragment"
+        android:name="org.treeo.treeo.ui.summary.ActivitySummaryFragment"
+        android:label="Summary Fragment"
+        tools:layout="@layout/fragment_activity_summary">
+        <action
+            android:id="@+id/action_activitySummaryFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment">
+            <argument
+                android:name="summaryItem"
+                app:argType="org.treeo.treeo.models.ActivitySummaryItem" />
+        </action>
+        <action
+            android:id="@+id/action_activitySummaryFragment_to_requestCameraFragment"
+            app:destination="@id/requestCameraFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/requestCameraFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.RequestCameraFragment"
+        android:label="RequestCameraFragment">
+        <action
+            android:id="@+id/action_requestCameraFragment_to_activitySummaryFragment"
+            app:destination="@id/activitySummaryFragment" />
+        <action
+            android:id="@+id/action_requestCameraFragment_to_landSurveyPrepFragment"
+            app:destination="@id/landSurveyPrepFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+        <action
+            android:id="@+id/action_requestCameraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_requestCameraFragment_to_treeMeasurementCameraFragment"
+            app:destination="@id/treeMeasurementCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/landSurveyPrepFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.LandSurveyPrepFragment"
+        android:label="LandSurveyPrepFragment">
+        <action
+            android:id="@+id/action_landSurveyPrepFragment_to_requestCameraFragment"
+            app:destination="@id/requestCameraFragment" />
+        <action
+            android:id="@+id/action_landSurveyPrepFragment_to_landPhotosFragment"
+            app:destination="@id/landPhotosFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+        <action
+            android:id="@+id/action_landSurveyPrepFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/landPhotosFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.LandPhotosFragment"
+        android:label="LandPhotosFragment">
+        <action
+            android:id="@+id/action_landPhotosFragment_to_landSurveyPrepFragment"
+            app:destination="@id/landSurveyPrepFragment" />
+        <action
+            android:id="@+id/action_landPhotosFragment_to_landCornersFragment"
+            app:destination="@id/landCornersFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+        <action
+            android:id="@+id/action_landPhotosFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/landCornersFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.LandCornersFragment"
+        android:label="LandCornersFragment">
+        <action
+            android:id="@+id/action_landCornersFragment_to_landPhotosFragment"
+            app:destination="@id/landPhotosFragment" />
+        <action
+            android:id="@+id/action_landCornersFragment_to_takeLandPhotos2"
+            app:destination="@id/takeLandPhotos">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+        <action
+            android:id="@+id/action_landCornersFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soilPhotosFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.SoilPhotoFragment"
+        android:label="SoilPhotosFragment">
+        <action
+            android:id="@+id/action_soilPhotosFragment_to_takeSoilPhotoFragment"
+            app:destination="@id/takeSoilPhotoFragment" />
+        <action
+            android:id="@+id/action_soilPhotosFragment_to_takeLandPhotos2"
+            app:destination="@id/takeLandPhotos" />
+        <action
+            android:id="@+id/action_soilPhotosFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeSoilPhotoFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.SoilPhotoFragment"
+        android:label="TakeSoilPhotoFragment">
+        <action
+            android:id="@+id/action_takeSoilPhotoFragment_to_soilPhotosFragment"
+            app:destination="@id/soilPhotosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeLandPhotos"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.TakeLandPhotos"
+        android:label="TakeLandPhotos">
+        <action
+            android:id="@+id/action_takeLandPhotos2_to_landCornersFragment"
+            app:destination="@id/landCornersFragment" />
+        <action
+            android:id="@+id/action_takeLandPhotos2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/landSpecificationFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.FinishLandSpecificationFragment"
+        android:label="LandSpecificationFragment">
+        <action
+            android:id="@+id/action_landSpecificationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_landSpecificationFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soilPhotoFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.SoilPhotoFragment"
+        android:label="fragment_soil_photo"
+        tools:layout="@layout/fragment_soil_photo" />
+    <fragment
+        android:id="@+id/treeMeasurementCameraFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TreeMeasurementCameraFragment"
+        android:label="fragment_tree_measurement_camera"
+        tools:layout="@layout/fragment_tree_measurement_camera">
+        <action
+            android:id="@+id/action_treeMeasurementCameraFragment_to_TMProcessingScreenFragment"
+            app:destination="@id/TMProcessingScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TMProcessingScreenFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMProcessingScreenFragment"
+        android:label="fragment_t_m_processing_screen"
+        tools:layout="@layout/fragment_t_m_processing_screen">
+        <action
+            android:id="@+id/action_TMProcessingScreenFragment_to_TMResultsFragment"
+            app:destination="@id/TMResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TMResultsFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMResultsFragment"
+        android:label="fragment_t_m_results"
+        tools:layout="@layout/fragment_t_m_results">
+        <action
+            android:id="@+id/action_TMResultsFragment_to_TMSelectSpeciesFragment"
+            app:destination="@id/TMSelectSpeciesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TMSelectSpeciesFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMSelectSpeciesFragment"
+        android:label="fragment_t_m_select_species">
+        <action
+            android:id="@+id/action_TMSelectSpeciesFragment_to_TMFullDetailsFragment"
+            app:destination="@id/TMFullDetailsFragment" />
+        <action
+            android:id="@+id/action_TMSelectSpeciesFragment_to_singleTreeInfoFragment"
+            app:destination="@id/tmSummaryInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TMFullDetailsFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMFullDetailsFragment"
+        android:label="fragment_t_m_full_details"
+        tools:layout="@layout/fragment_t_m_full_details" />
+    <dialog
+        android:id="@+id/bottomSheetDialog"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.BottomSheetDialog"
+        android:label="BottomSheetDialog">
+        <action
+            android:id="@+id/action_bottomSheetDialog_to_treeMeasureIntroFragment"
+            app:destination="@id/treeMeasureIntroFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/bottomSheetTipsDialog"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.BottomSheetTipsDialog"
+        android:label="BottomSheetTipsDialog" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="org.treeo.treeo.ui.terms.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+</navigation>

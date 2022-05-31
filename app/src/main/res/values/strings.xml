@@ -1,0 +1,275 @@
+<resources>
+    <string name="app_name">TREEO</string>
+    <string name="facebook_app_id" translatable="false">915429019225102</string>
+    <string name="logout_button_text">Log Out</string>
+    <string name="user_token" translatable="false">User Token</string>
+    <string name="user_id" translatable="false">User Id</string>
+    <string name="user_name" translatable="false">User Name</string>
+    <string name="user_phone_number" translatable="false">User Number</string>
+    <string name="device_info_saved" translatable="false">Device Info Saved</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="country">Country</string>
+    <string name="text_choose_language">Choose Your Language First</string>
+    <string name="hint_choose_language">Choose the TREEO APP language. You can always change it in settings.</string>
+    <string name="english" translatable="false">English</string>
+    <string name="luganda" translatable="false">Luganda</string>
+    <string name="bahasa" translatable="false">Bahasa</string>
+    <string name="spanish" translatable="false">Spanish</string>
+    <string name="first_time_user" translatable="false">first_time_user</string>
+    <string name="your_phone_number">Type your phone number</string>
+    <string name="pick_your_country">Pick your country</string>
+    <string name="text_continue">CONTINUE</string>
+    <string name="resend_the_passcode">RESEND THE PASSCODE</string>
+    <string name="passcode_delay_text">It might take a couple of minutes to receive the passcode</string>
+    <string name="camera_button_description" translatable="false">This is the camera button</string>
+    <string name="title_home">Home</string>
+    <string name="title_guide">Guide</string>
+    <string name="title_learn">Learn</string>
+    <string name="title_profile">Profile</string>
+    <string name="lorem_ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <string name="text_back">BACK</string>
+    <string name="otp_pass_code_message">Confirm the passcode sent to</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="text_create_a_better_income">Create a Better World and Grow your income by planting trees</string>
+    <string name="text_treeo_goal">We provide seedlings, educate and help farmers to create a sustainable income by planting trees.</string>
+    <string name="gdpr_conditions" translatable="true"> GDPR Conditions</string>
+    <string name="selected_language" translatable="false">Selected Language</string>
+    <string name="sample_activity_title" translatable="false">Sample activity title</string>
+    <string name="sample_form_title_text">Part 1 - Form</string>
+    <string name="sample_duration" translatable="false">5 MINS</string>
+    <string name="start_text">START</string>
+    <string name="sample_activity_code" translatable="false">Activity Code</string>
+    <string name="placeholder_dashes" translatable="false">___</string>
+    <string name="text_completed">COMPLETED</string>
+    <string name="text_edit">EDIT</string>
+    <string name="label_retake">RETAKE</string>
+    <string name="label_retake_photo">RETAKE PHOTO</string>
+    <string name="check_photo_txt">If the photo is blurry or simply unclear, you can retake. Otherwise you can continue.</string>
+    <string name="check_photo_validity">Is this photo clear?</string>
+    <string name="photo">photo</string>
+    <string name="take_photo">Take a picture of your land from each of its corners</string>
+    <string name="close">close</string>
+    <string name="specify_your_land_by_using_a_camera">Specify your land by using a camera</string>
+    <string name="have_all_your_field_in_order">Have all your field in order</string>
+    <string name="capture_your_trees_including_the_gps">Capture your trees including the GPS</string>
+    <string name="turn_on_camera">Turn on Camera</string>
+    <string name="before_you_start_prepare_those_3_things">Before you start prepare these 3 things:</string>
+    <string name="instructions_preview">You should have these things with you to avoid having to come back from the field</string>
+    <string name="_1_full_phone_battery">1. Full phone battery</string>
+    <string name="to_be_prepared_for_any_case">To be prepared for any case</string>
+    <string name="_2_a_digging_tool">2. A digging tool</string>
+    <string name="to_photograph_the_ground_soil">To photograph the ground soil</string>
+    <string name="_3_around_25_minutes">3. Around 25 minutes</string>
+    <string name="according_to_your_land_size">According to your land size</string>
+    <string name="start_land_photos">Start land photos</string>
+    <string name="step_1_land_photos">Step 1: Land Photos</string>
+    <string name="to_determine_how_many_pictures_you_will_take">To determine how many pictures you will take.</string>
+    <string name="step_2_soil_photo">Step 2: Soil Photo</string>
+    <string name="dig_instructions_text">Now dig a hole in the ground and take a photo of your soil</string>
+    <string name="finish_land_specification">Finish land specification</string>
+    <string name="instruction_check_photo">If the photo is blurry or simply unclear, you can retake it. Otherwise you can finish the land specification</string>
+    <string name="is_this_soil_photo_clear">Is this soil photo clear</string>
+    <string name="how_many_corners_does_your_land_have">How many corners does your land have?</string>
+    <string name="label_offline_information">You are offline now. Don\'t worry, the app works offline. In case of data collection connect to the Internet to send us data.</string>
+    <string name="label_offline_mode">You are using offline mode.</string>
+    <string name="label_data_to_send">You have data to send. Connect to the internet to upload it.</string>
+    <string name="label_go_to_settings">GO TO SETTINGS</string>
+    <string name="label_unfinished_activity">You have an unfinished activity. Click Continue to finish it now.</string>
+    <string name="label_please_stay_connected">Please stay connected…</string>
+    <string name="label_uploading_data_now">You are uploading your data now. Give it a few seconds to finish</string>
+    <string name="label_all_data_uploaded">You have successfully uploaded all your data.</string>
+    <string name="offline_info_dismissed" translatable="false">offline information dismissed</string>
+    <string name="last_data_sync_was_done">Last data sync was done %s</string>
+    <string name="to_sync_">\u0020 data item to Sync</string>
+    <string name="to_sync">\u0020 data items to Sync</string>
+    <string name="app_status">App status</string>
+    <string name="sync_data">SYNC DATA</string>
+    <string name="you_are_online_now">You are online now</string>
+    <string name="all_functions_and_courses_are_available_now">All functions and courses are available now</string>
+    <string name="all_your_data_is_synced">All your data is synced</string>
+    <string name="sync_in_progress">SYNC in progress</string>
+    <string name="all_functions_and_courses_are_being_uploaded_now">All functions and courses are being uploaded now</string>
+    <string name="you_have_still_have_pending_data_to_sync">Don\'t worry your data will be uploaded.\nMake sure your network is good and battery</string>
+    <string name="you_are_offline_now">You are offline now</string>
+    <string name="don_t_worry_app_works_fine_offline_too">Don\'t worry, app works fine offline too</string>
+    <string name="my_treeo">My TREEO</string>
+    <string name="what_is_needed_to_be_done">What is needed to be done.</string>
+    <string name="user_greeting">%s</string>
+    <string name="label_exit" translatable="false">EXIT</string>
+    <string name="message_getting_location">Getting location</string>
+    <string name="message_check_settings">We failed to get your location, please check your settings.</string>
+    <string name="continue_to_photos">continue to photos</string>
+    <string name="treeo_guide">TREEO Guide</string>
+    <string name="looks_like_you_ve_run_out_of_n_planned_activities">Looks like you\'ve run out of \n planned activities</string>
+    <string name="see_all">See all activities</string>
+    <string name="what_s_new">What\'s New</string>
+    <string name="you_have_completed_the_land_specification">You have completed the land specification</string>
+    <string name="continue_to_dashboard">continue to dashboard</string>
+    <string name="what_is_your_main_motivation_in_treeo">What is your main motivation in TREEO?</string>
+    <string name="choose_one_or_more_relevant_options">Choose one or more relevant options</string>
+    <string name="earn_better_income">Earn better income</string>
+    <string name="learn_valuable_forestry_skills">Learn valuable forestry skills</string>
+    <string name="have_firewood">Have firewood</string>
+    <string name="improve_the_environment">Improve the environment</string>
+    <string name="step_1_how_to_plant_and_maintain_trees">1. Learn how to plant and maintain trees</string>
+    <string name="learn_how_to_plant_trees_in_the_best_way_and_how_to_maintain_trees_to_increase_the_value_of_yout_timber">Learn how to plant trees in the best way and how to maintain trees to increase the value of your timber</string>
+    <string name="step_2_know_the_value_of_your_trees">2. Know the value of your trees</string>
+    <string name="get_to_know_the_value_of_your_timber_with_our_app_and_sell_your_timber_for_a_fair_market_price">Get to know the value of your timber with our app and sell your timber for a fair market price.</string>
+    <string name="our_main_goal_is_to_preserve_the_environment_and_with_your_help_we_can_make_it_happen_together">Our main goal is to preserve the environment and with your help we can make it happen together.</string>
+    <string name="step_4_support_your_neigbourhood">4. Support your neigbourhood</string>
+    <string name="trees_bring_water_to_your_village_give_you_shade_provide_benefits_to_the_soil_for_growing_crops_and_many_other_benefits">Trees bring water to your village, give you shade, provide benefits to the soil for growing crops and many other benefits.</string>
+    <string name="login_into_treeo">Login into TREEO</string>
+    <string name="question_1_this_is_a_sample_question">Question 1: This is a sample Question?</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="default_greeting">Hi</string>
+    <string name="welcome_to_treeo">welcome to TREEO!</string>
+    <string name="tree_planting_level">Beginner</string>
+    <string name="phone_number2" translatable="false">+256 78945431</string>
+    <string name="today">TODAY</string>
+    <string name="define_your_land">Define Your Land</string>
+    <string name="new_course_available">New Course Available</string>
+    <string name="continue_to_soil_photo">CONTINUE TO SOIL PHOTO</string>
+    <string name="land_photos">"Land Photos \u0020"</string>
+    <string name="soil_photos">Soil Photo \u0020</string>
+    <string name="measure">Measure</string>
+    <string name="my_profile">My Profile</string>
+    <string name="back_3_4">BACK 3/4</string>
+    <string name="next_4_4">NEXT 4/4</string>
+    <string name="next_3_4">NEXT 3/4</string>
+    <string name="next_1_4">NEXT 1/4</string>
+    <string name="back_1_4">BACK 1/4</string>
+    <string name="photos">Photos</string>
+    <string name="part" translatable="false">Part \u0020</string>
+    <string name="in_the_field">IN THE FIELD</string>
+    <string name="form">Form</string>
+    <string name="by_continuing_you_agree_to_the_treeo">By Continuing, you agree to the TREEO</string>
+    <string name="upload_percentage_placeholder">%s%% of %s</string>
+    <string name="message_cannot_access_location">We are unable to access your location.</string>
+    <string name="text_unfinished">UNFINISHED</string>
+    <string name="last_sync_date_not_application">Last sync date N/A</string>
+
+    <string name="photograph_the_tree_and_learn_important_information">Photograph the tree and learn important information</string>
+    <string name="does_the_rectangle_fit_the_tree_trunk">Does the rectangle fit the tree trunk?</string>
+    <string name="if_the_rectangle_does_not_fit_the_trunk_please_retake_the_photo_try_a_different_angle_or_light">If the rectangle does not fit the trunk, please retake the photo. Try a different angle or light.</string>
+    <string name="tips">TIPS</string>
+    <string name="listen_to_learn_how_to_take_photos_properly">Listen to learn how to take photos properly</string>
+    <string name="whole_field">Whole field</string>
+    <string name="might_take_minutes_text">This might take a few moments. Please wait until the images are ready to be sent</string>
+    <string name="processing_the_image">Processing the image</string>
+    <string name="what_is_the_tree_specie">What is the tree specie?</string>
+    <string name="qtn_tree_health">How is the tree doing?</string>
+    <string name="finish">Finish</string>
+    <string name="measurement_is_correct">measurement is correct</string>
+    <string name="_1_tree_measurement">1 Tree Measurement</string>
+    <string name="grevillea_baileyana">Grevillea Baileyana</string>
+    <string name="first_important_measurement_data">First, important measurement data</string>
+    <string name="diameter">Diameter</string>
+    <string name="diameter_value">12CM</string>
+    <string name="go_to_dashboard">go to dashboard</string>
+    <string name="go_to_profile">Go to profile</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_camera_guide">Place the card here</string>
+    <string name="message_permissions_required_to_measure_tree">TREEO needs access to your camera and location to measure a tree.</string>
+    <string name="label_device_access">Device Access</string>
+    <string name="flash_on">Flash On</string>
+    <string name="flash_off">Flash Off</string>
+    <string name="message_flash_turned_on">Flash turned on</string>
+    <string name="message_flash_turned_off">Flash turned off</string>
+    <string name="text_bad_photo_hint">The photo was not taken in the proper way. Try to keep more stable, different angle or light.</string>
+    <string name="text_retake_photo">Retake the photo please</string>
+    <string name="audio_start_time" translatable="false">0:0</string>
+    <string name="audio_end_time_placeholder" translatable="false">%d:%d</string>
+    <string name="empty_state">Empty State</string>
+    <string name="nothing_growing_in_here_for_now">Nothing growing in here for now!</string>
+    <string name="there_are_now_activities_for_you_at_the_moment_you_can_either_wait_or_contact_our_help_center">There are now activities for you at the moment. You can either wait or contact our Help Center</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="after_upload_info">After uploading the data, you will know if you can join the project.</string>
+    <string name="instructions_title">Before you start take note on these instructions</string>
+    <string name="conditions_for_good_results">Conditions for good results</string>
+    <string name="uniform_lighting_without_shadows_and_overexposure">Uniform lighting without shadows and overexposure</string>
+    <string name="green_background_is_best">Green background is best</string>
+    <string name="center_card_instruction">Center card in the middle of the tree</string>
+    <string name="vertical_tree_instruction">Straight tree (vertical, not rotated in the image)</string>
+    <string name="avoid_complex_backgrounds_instruction">Avoid complex/challenging backgrounds</string>
+    <string name="tree_trunk_smoothness_instruction">Tree trunk with a smooth surface works better.</string>
+    <string name="personalize_your_profile_by_adding_your_full_name">Personalize your profile by adding your full name</string>
+    <string name="register_login">Register/Login</string>
+    <string name="which_organization_are_you_register_in">Which organization are you registered in</string>
+    <string name="activate_account_first">"Tap here to activate your account"</string>
+    <string name="message_cannot_got_to_settings">Cannot go to settings</string>
+    <string name="message_not_yet_implemented">Not yet implemented</string>
+    <string name="set_up_your_profile">Set up your profile</string>
+    <string name="improve_the_environment_title">3. Improve the environment</string>
+    <string name="label_manually_measured_diameter">Manually measured diameter</string>
+    <string name="hint_manual_diameter">Diameter in mm</string>
+    <string name="info_unfinished_activity">You have an unfinished Tree Measurement, by starting a new one you will lose the previous data. Would you like to continue where you finished?</string>
+    <string name="label_start_new">START NEW</string>
+    <string name="label_continue">YES, CONTINUE</string>
+    <string name="summary">Summary</string>
+    <string name="know_the_progress_of_your_trees">Know the progress of your trees</string>
+    <string name="see_report">SEE THE REPORT</string>
+    <string name="well_done_you_finished_the_tree_measurement">Well done! You finished the Tree measurement!</string>
+    <string name="next_tree">Next Tree</string>
+    <string name="finish_or_pause">Finish/Pause</string>
+    <string name="tree_measurement">Tree Measurement</string>
+    <string name="preparation_checklist">Make sure you have these things with you to avoid having to come back from the field.</string>
+    <string name="treeo_card">2. TREEO Card</string>
+    <string name="reason_for_treeo_card">For the tree measurement</string>
+    <string name="expected_time_for_neasurement">3. Around 90 minutes</string>
+    <string name="measure_the_trees_button">Measure the trees</string>
+    <string name="first_guide_for_treemeasurement">Step 1: You will take a picture of the first tree with the TREEO card</string>
+    <string name="prompt_for_exit">Are you sure you want to exit the measurement? We will save your data and you can continue later. Mark the tree where you finished to know where to start next time.</string>
+    <string name="cancel">Cancel</string>
+    <string name="pause">Pause</string>
+    <string name="save_and_exit">Save and Exit</string>
+    <string name="title_confirm_inventory_delete">Delete Inventory</string>
+    <string name="prompt_confirm_inventory_delete">Your data will be lost. Are you sure you want to delete an incomplete inventory?</string>
+    <string name="option_delete">Delete</string>
+    <string name="message_select_specie">Select a tree specie</string>
+    <string name="_1_actual_action">1. Actual Action</string>
+    <string name="potential_prediction">2. Potential Prediction</string>
+    <string name="in_this_first_part_you_can_find_the_actual_facts_about_your_trees_now">In this first part, you can find the actual facts about your trees now</string>
+    <string name="keep_taking_good_care_of_your_trees_and_achieve_these_values_in_time">Keep taking good care of your trees and achieve these values in time.</string>
+    <string name="best_harvest_time">Best harvest time</string>
+    <string name="est_price">Est. price</string>
+    <string name="trees">Trees</string>
+    <string name="what_s_next">What\'s next?</string>
+    <string name="learn_other_ways_how_to_increase_the_tree_growth_and_timber_quality">Learn other ways how to increase the tree growth and timber quality</string>
+    <string name="see_my_profile">SEE MY PROFILE</string>
+    <string name="i_understand">I UNDERSTAND</string>
+    <string name="seen_harvest_dialog">seen_harvest_dialog</string>
+    <string name="seen_potential_value_dialog">seen_potential_value_dialog</string>
+    <string name="seen_carbon_credits_dialog">seen_carbon_credits_dialog</string>
+    <string name="label_open_gdpr_policy">Open GDPR Policy</string>
+    <string name="next_corner">Next Corner</string>
+    <string name="turn_on_location">Turn On Location</string>
+    <string name="enable">Enable</string>
+    <string name="turn_on_location_desc">Switch on the location setting to enable TREEO access your location for this activity</string>
+    <string name="label_big_tree"><![CDATA[TREE > 1M]]></string>
+    <string name="label_little_tree">LITTLE TREE</string>
+    <string name="qtn_use_this_photo">Do you want to use this photo?</string>
+    <string name="instruction_retake_photo">If you are not satisfied with this photo, you can retake it.</string>
+    <string name="text_continue_with_photo">CONTINUE WITH THIS PHOTO</string>
+    <string name="description_retake_small_tree">Either there is no tree or the photo is not taken properly, please retake it.</string>
+    <string name="error_could_not_validate_phone">Could not validate phone number, please check your connection</string>
+    <string name="prompt_select_language">Please select a language</string>
+    <string name="whole_field_measurement">Whole Field Measurement</string>
+    <string name="label_bad">Bad</string>
+    <string name="label_good">Good</string>
+    <string name="label_dead">Dead</string>
+    <string name="label_manual_height">Manually measured height</string>
+    <string name="hint_height_in_meters">Height in centimeters</string>
+    <string name="label_comments">Comment</string>
+    <string name="hint_comments_input">Any comment about the measurement</string>
+    <string name="one_tree_not_available">One Tree Measurement not available at the moment</string>
+    <string name="message_tree_health_required">Tree health is required</string>
+    <string name="message_manual_diameter_required">Manual diameter is required</string>
+    <string name="message_tree_height_required">Tree height is required</string>
+    <string name="message_comment_required">Comment is required</string>
+    <string name="label_optional">(Optional)</string>
+    <string name="label_required">(Required)</string>
+    <string name="skip_measurement">Record tree and continue</string>
+    <string name="skip">Skip measurement</string>
+</resources>

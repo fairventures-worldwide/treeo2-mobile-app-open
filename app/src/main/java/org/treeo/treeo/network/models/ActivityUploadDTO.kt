@@ -1,0 +1,25 @@
+package org.treeo.treeo.network.models
+
+data class ActivityUploadDTO(
+    var id: String?,
+    var activityTemplateID: Long?,
+    var userID: Long?,
+    var plotID: Long?,
+    var startDate: String?,
+    var endDate: String?,
+    var synced: String?,
+    var restarted: Int?,
+    var mobileAppVersion: String?,
+    var outsidePolygon: List<String>,
+    var fullyCompleted: Boolean,
+    var labels: List<String>?,
+    var comment: String?,
+    var commentAudio: String?,
+    var totalSteps: Int?,
+    var preQuestionnaireID: Long?,
+    var preQuestionnaireData: String?,
+    var postQuestionnaireID: Long?,
+    var postQuestionnaireData: String?,
+    var deviceInformationID: Long?,
+    var measurementCount: Int?,
+)

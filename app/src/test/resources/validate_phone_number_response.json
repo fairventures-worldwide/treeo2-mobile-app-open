@@ -1,0 +1,8 @@
+{
+  "data": {
+    "phoneNumber": "+123000000000",
+    "valid": true,
+    "errorStatus": "None"
+  },
+  "message": "phone number found"
+}

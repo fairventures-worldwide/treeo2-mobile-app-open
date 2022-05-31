@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.registration.RegistrationHostFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextAppearance="@style/TitleTheme"
+        app:titleTextColor="@color/app_green">
+
+        <TextView
+            android:id="@+id/photoTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:fontFamily="@font/quicksand"
+            android:textFontWeight="500"
+            android:text="Login/Register"
+            android:textColor="@color/app_green"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/viewsx"
+        android:layout_height="16dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/registrationIndicatorView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewsx"
+        app:sv_animationType="All"
+        app:sv_doneCircleColor="@color/app_green"
+        app:sv_doneCircleRadius="8dp"
+        app:sv_doneStepLineColor="@color/app_green"
+        app:sv_doneStepMarkColor="@android:color/white"
+        app:sv_doneTextColor="@android:color/white"
+        app:sv_nextStepCircleColor="@color/app_green_20"
+        app:sv_nextStepCircleEnabled="true"
+        app:sv_nextStepLineColor="@color/app_green_20"
+        app:sv_selectedCircleColor="@color/app_green"
+        app:sv_selectedCircleRadius="8dp"
+        app:sv_selectedStepNumberColor="@android:color/white"
+        app:sv_stepNumberTextSize="8sp"
+        app:sv_stepPadding="2dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/registrationViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationIndicatorView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

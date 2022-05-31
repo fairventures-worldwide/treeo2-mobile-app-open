@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="0dp"
+    tools:context=".ui.authentication.onboarding.screens.OnBoardingScreen4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/onBoardingScreen4ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_tree_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/onBoardingScreen4TitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/step_4_support_your_neigbourhood"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textColor="@color/app_green"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onBoardingScreen4ImageView" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/line_drawable"
+            app:layout_constraintStart_toStartOf="@+id/onBoardingScreen4TitleTV"
+            app:layout_constraintTop_toBottomOf="@+id/onBoardingScreen4TitleTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/onBoardingScreen4TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trees_bring_water_to_your_village_give_you_shade_provide_benefits_to_the_soil_for_growing_crops_and_many_other_benefits"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <LinearLayout
+            android:id="@+id/llUserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onBoardingScreen4TextView">
+
+            <android.widget.Button
+                android:id="@+id/onBoardingScreen4BackButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/back_button_state_list"
+                android:drawableStart="@drawable/ic_arrow_back_16"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/back_3_4"
+                android:textColor="@color/app_green"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="0dp" />
+
+            <android.widget.Button
+                android:id="@+id/onBoardingScreen4ContinueButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/button_state_list"
+                android:drawableEnd="@drawable/ic_arrow_forward_16"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/text_continue"
+                android:textColor="@color/text_color_state_list"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

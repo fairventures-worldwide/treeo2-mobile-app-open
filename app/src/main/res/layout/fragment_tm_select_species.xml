@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextAppearance="@style/TitleTheme"
+            app:titleTextColor="@color/app_green">
+
+            <TextView
+                android:id="@+id/photoTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/_1_tree_measurement"
+                android:textColor="@color/app_green"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/displayPhotoCardView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <ImageView
+                android:id="@+id/displayPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tree_img" />
+
+            <TextView
+                android:id="@+id/diameterTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/textview_background_transparent_grey"
+                android:padding="8dp"
+                android:textAppearance="@style/HeadlineTheme"
+                android:textColor="#3C3932" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/qtnTreeSpecie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/what_is_the_tree_specie"
+            android:textAppearance="@style/HeadlineTheme"
+            android:textColor="@color/app_green"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/displayPhotoCardView" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/line_drawable"
+            android:backgroundTint="@color/grey_90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qtnTreeSpecie" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTreeSpecies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/qtnTreeHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/qtn_tree_health"
+            android:textAppearance="@style/HeadlineTheme"
+            android:textColor="@color/app_green"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvTreeSpecies" />
+
+        <TextView
+            android:id="@+id/tvRequiredOrOptional1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/qtnTreeHealth"
+            app:layout_constraintTop_toBottomOf="@id/qtnTreeHealth"
+            tools:layout_editor_absoluteY="160dp"
+            tools:text="(Required)" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line_drawable"
+            android:backgroundTint="@color/grey_90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequiredOrOptional1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardGoodHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:elevation="24dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardBadHealth"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLGoodHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/icGoodHealth"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_good_health" />
+
+                <TextView
+                    android:id="@+id/labelGoodHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_good"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icGoodHealth" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBadHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:elevation="24dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardGoodHealth"
+            app:layout_constraintEnd_toStartOf="@+id/cardDeadHealth"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardGoodHealth"
+            app:layout_constraintTop_toTopOf="@id/cardGoodHealth">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLBadHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/icBadHealth"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_bad_health" />
+
+                <TextView
+                    android:id="@+id/labelBadHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_bad"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icBadHealth" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDeadHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:elevation="24dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardBadHealth"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardBadHealth"
+            app:layout_constraintTop_toTopOf="@id/cardBadHealth">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLDeadHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/icDeadHealth"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_dead_health" />
+
+                <TextView
+                    android:id="@+id/labelDeadHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_dead"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icDeadHealth" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvManualDiameterInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_manually_measured_diameter"
+            android:textAppearance="@style/HeadlineTheme"
+            android:textColor="@color/app_green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardGoodHealth" />
+
+        <TextView
+            android:id="@+id/tvRequiredOrOptional2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvManualDiameterInput"
+            app:layout_constraintTop_toBottomOf="@id/tvManualDiameterInput"
+            tools:text="(Optional)" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line_drawable"
+            android:backgroundTint="@color/grey_90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequiredOrOptional2" />
+
+        <EditText
+            android:id="@+id/manualDiameterInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_manual_diameter"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line3" />
+
+        <TextView
+            android:id="@+id/tvManualHeightInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_manual_height"
+            android:textAppearance="@style/HeadlineTheme"
+            android:textColor="@color/app_green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/manualDiameterInput" />
+
+        <TextView
+            android:id="@+id/tvRequiredOrOptional3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvManualHeightInput"
+            app:layout_constraintTop_toBottomOf="@id/tvManualHeightInput"
+            tools:text="(Optional)" />
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line_drawable"
+            android:backgroundTint="@color/grey_90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequiredOrOptional3" />
+
+        <EditText
+            android:id="@+id/manualHeightInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_height_in_meters"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line4" />
+
+        <TextView
+            android:id="@+id/tvCommentInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_comments"
+            android:textAppearance="@style/HeadlineTheme"
+            android:textColor="@color/app_green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/manualHeightInput" />
+
+        <TextView
+            android:id="@+id/tvRequiredOrOptional4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvCommentInput"
+            app:layout_constraintTop_toBottomOf="@id/tvCommentInput"
+            tools:text="(Optional)" />
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line_drawable"
+            android:backgroundTint="@color/grey_90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequiredOrOptional4" />
+
+        <EditText
+            android:id="@+id/commentInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_comments_input"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line5" />
+
+        <android.widget.Button
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/button_state_list"
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/finish"
+            android:textAppearance="@style/TextThemeButton"
+            android:textColor="@color/text_color_state_list"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/next_tree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commentInput" />
+
+        <android.widget.Button
+            android:id="@+id/next_tree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/button_state_list"
+            android:drawableEnd="@drawable/ic_arrow_forward_16"
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/next_tree"
+            android:textAppearance="@style/TextThemeButton"
+            android:textColor="@color/text_color_state_list"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/finish_btn"
+            app:layout_constraintTop_toBottomOf="@+id/commentInput" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpTreeHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="cardGoodHealth,qtnTreeHealth,cardBadHealth,cardDeadHealth,line2" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpManualDiameter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvManualDiameterInput,manualDiameterInput,tvRequiredOrOptional2,line3" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpManualHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="manualHeightInput,tvManualHeightInput,tvRequiredOrOptional3,line4" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvCommentInput,commentInput,tvRequiredOrOptional4,line5" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpSpeciesHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="qtnTreeSpecie,line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

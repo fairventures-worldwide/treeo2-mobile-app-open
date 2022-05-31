@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.questionnaire.screens.QuestionnaireFragment">
+
+    <ImageView
+        android:id="@+id/questionnaireImageView"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/treeo_logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/questionnaireIndicatorView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionnaireImageView"
+        app:sv_animationType="All"
+        app:sv_doneCircleColor="@color/app_green"
+        app:sv_doneCircleRadius="8dp"
+        app:sv_doneStepLineColor="@color/app_green"
+        app:sv_doneStepMarkColor="@android:color/white"
+        app:sv_doneTextColor="@android:color/white"
+        app:sv_nextStepCircleColor="@color/app_green_20"
+        app:sv_nextStepCircleEnabled="true"
+        app:sv_nextStepLineColor="@color/app_green_20"
+        app:sv_selectedCircleColor="@color/app_green"
+        app:sv_selectedCircleRadius="8dp"
+        app:sv_selectedStepNumberColor="@android:color/white"
+        app:sv_stepNumberTextSize="8sp"
+        app:sv_stepPadding="2dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/questionnaireTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/question_1_this_is_a_sample_question"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/app_green"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionnaireIndicatorView" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="150dp"
+        android:layout_height="4dp"
+        android:background="@drawable/line_drawable"
+        app:layout_constraintStart_toStartOf="@+id/questionnaireTextView"
+        app:layout_constraintTop_toBottomOf="@+id/questionnaireTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/optionRecyclerview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/questionnaireTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/questionnaireTextView"
+        app:layout_constraintTop_toBottomOf="@+id/questionnaireDescriptionTextView" />
+
+
+    <android.widget.Button
+        android:id="@+id/questionnaireContinueButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_state_list"
+        android:drawableEnd="@drawable/ic_arrow_forward_16"
+        android:enabled="false"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/text_continue"
+        android:textColor="@color/text_color_state_list"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pages_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questionnaireDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/option_text_state_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionnaireTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

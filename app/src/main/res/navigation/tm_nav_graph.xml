@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tm_nav_graph"
+    app:startDestination="@id/TMInstructionsFragment">
+
+    <fragment
+        android:id="@+id/TMInstructionsFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMInstructionsFragment"
+        android:label="TMInstructionsFragment">
+        <action
+            android:id="@+id/action_TMInstructionsFragment_to_treeMeasureIntroFragment"
+            app:destination="@id/treeMeasureIntroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treeMeasureIntroFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TreeMeasureIntroFragment"
+        android:label="fragment_tree_measure_intro"
+        tools:layout="@layout/fragment_tree_measure_intro">
+        <action
+            android:id="@+id/action_treeMeasureIntroFragment_to_requestCameraFragment"
+            app:destination="@id/requestCameraFragment" />
+        <action
+            android:id="@+id/action_treeMeasureIntroFragment_to_TMInstructionsFragment"
+            app:destination="@id/TMInstructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestCameraFragment"
+        android:name="org.treeo.treeo.ui.landsurvey.screens.RequestCameraFragment"
+        android:label="RequestCameraFragment">
+        <action
+            android:id="@+id/action_requestCameraFragment_to_activitySummaryFragment"
+            app:destination="@id/activitySummaryFragment" />
+        <action
+            android:id="@+id/action_requestCameraFragment_to_landSurveyPrepFragment"
+            app:destination="@id/landSurveyPrepFragment">
+            <argument
+                android:name="activity"
+                app:argType="org.treeo.treeo.models.Activity" />
+        </action>
+        <action
+            android:id="@+id/action_requestCameraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_requestCameraFragment_to_treeMeasurementCameraFragment"
+            app:destination="@id/treeMeasurementCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treeMeasurementCameraFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TreeMeasurementCameraFragment"
+        android:label="fragment_tree_measurement_camera"
+        tools:layout="@layout/fragment_tree_measurement_camera">
+        <action
+            android:id="@+id/action_treeMeasurementCameraFragment_to_TMProcessingScreenFragment"
+            app:destination="@id/TMProcessingScreenFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetTipsDialog"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.BottomSheetTipsDialog"
+        android:label="BottomSheetTipsDialog" />
+    <fragment
+        android:id="@+id/TMResultsFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMResultsFragment"
+        android:label="fragment_t_m_results"
+        tools:layout="@layout/fragment_t_m_results">
+        <action
+            android:id="@+id/action_TMResultsFragment_to_TMSelectSpeciesFragment"
+            app:destination="@id/TMSelectSpeciesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TMSelectSpeciesFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.TMSelectSpeciesFragment"
+        android:label="fragment_t_m_select_species">
+        <action
+            android:id="@+id/action_TMSelectSpeciesFragment_to_TMFullDetailsFragment"
+            app:destination="@id/TMFullDetailsFragment" />
+        <action
+            android:id="@+id/action_TMSelectSpeciesFragment_to_singleTreeInfoFragment"
+            app:destination="@id/tmSummaryInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tmSummaryInfoFragment"
+        android:name="org.treeo.treeo.ui.treemeasurement.screens.SingleTMSummaryFragment"
+        android:label="SingleTreeInfoFragment" />
+    <fragment
+        android:id="@+id/preparationFragment"
+        android:name="org.treeo.treeo.ui.forestinventory.PreparationFragment"
+        android:label="PreparationFragment" />
+    <fragment
+        android:id="@+id/firstGuideFragment"
+        android:name="org.treeo.treeo.ui.forestinventory.FirstGuideFragment"
+        android:label="FirstGuideFragment" />
+    <fragment
+        android:id="@+id/inventorySummaryFragment"
+        android:name="org.treeo.treeo.ui.forestinventory.ForestInventorySummaryFragment"
+        android:label="ForestInventorySummaryFragment" />
+    <fragment
+        android:id="@+id/inventoryReportFragment"
+        android:name="org.treeo.treeo.ui.forestinventory.InventoryReportFragment"
+        android:label="fragment_inventory_report" />
+    <fragment
+        android:id="@+id/selectWholeFieldFragment"
+        android:name="org.treeo.treeo.ui.forestinventory.SelectWholeFieldFragment"
+        android:label="fragment_select_whole_field"
+        tools:layout="@layout/fragment_select_whole_field" />
+</navigation>

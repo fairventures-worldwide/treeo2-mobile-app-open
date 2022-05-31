@@ -1,0 +1,899 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 12,
+    "identityHash": "faabf170e72fe9fa4ac23904a094bb9b",
+    "entities": [
+      {
+        "tableName": "Activity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activityUUID` TEXT, `activityRemoteId` INTEGER, `dueDate` TEXT, `inProgress` INTEGER NOT NULL, `isComplete` INTEGER NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `type` TEXT, `status` TEXT, `isAdhoc` INTEGER NOT NULL, `startDate` TEXT, `endDate` TEXT, `syncDate` TEXT, `measurementCount` INTEGER, `activityId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `specieCodes` TEXT, `templateRemoteId` INTEGER, `activityType` TEXT, `code` INTEGER, `preQuestionnaireId` INTEGER, `postQuestionnaireId` INTEGER, `soilPhotoRequired` INTEGER, `measurementType` TEXT, `id` INTEGER, `area` INTEGER, `externalId` TEXT, `polygon` TEXT, `ownerID` INTEGER, `plotName` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "activityUUID",
+            "columnName": "activityUUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "activityRemoteId",
+            "columnName": "activityRemoteId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inProgress",
+            "columnName": "inProgress",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isComplete",
+            "columnName": "isComplete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isAdhoc",
+            "columnName": "isAdhoc",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startDate",
+            "columnName": "startDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "endDate",
+            "columnName": "endDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "syncDate",
+            "columnName": "syncDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "measurementCount",
+            "columnName": "measurementCount",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "activityId",
+            "columnName": "activityId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "configuration.specieCodes",
+            "columnName": "specieCodes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.templateRemoteId",
+            "columnName": "templateRemoteId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.activityType",
+            "columnName": "activityType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.code",
+            "columnName": "code",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.preQuestionnaireId",
+            "columnName": "preQuestionnaireId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.postQuestionnaireId",
+            "columnName": "postQuestionnaireId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.configuration.soilPhotoRequired",
+            "columnName": "soilPhotoRequired",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "template.configuration.measurementType",
+            "columnName": "measurementType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot.area",
+            "columnName": "area",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot.externalId",
+            "columnName": "externalId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot.polygon",
+            "columnName": "polygon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot.ownerID",
+            "columnName": "ownerID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot.plotName",
+            "columnName": "plotName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "activityId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Option",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`optionId` INTEGER PRIMARY KEY AUTOINCREMENT, `pageId` INTEGER, `code` TEXT, `isSelected` INTEGER NOT NULL, `title` TEXT NOT NULL, FOREIGN KEY(`pageId`) REFERENCES `Page`(`pageId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "optionId",
+            "columnName": "optionId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pageId",
+            "columnName": "pageId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isSelected",
+            "columnName": "isSelected",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "optionId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Page",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pageId"
+            ],
+            "referencedColumns": [
+              "pageId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Page",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`pageId` INTEGER PRIMARY KEY AUTOINCREMENT, `questionnaireId` INTEGER, `pageType` TEXT, `questionCode` TEXT, `header` TEXT NOT NULL, `description` TEXT NOT NULL, `mandatory` INTEGER NOT NULL, FOREIGN KEY(`questionnaireId`) REFERENCES `Questionnaire`(`questionnaireId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "pageId",
+            "columnName": "pageId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "questionnaireId",
+            "columnName": "questionnaireId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pageType",
+            "columnName": "pageType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "questionCode",
+            "columnName": "questionCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "header",
+            "columnName": "header",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mandatory",
+            "columnName": "mandatory",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "pageId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Questionnaire",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionnaireId"
+            ],
+            "referencedColumns": [
+              "questionnaireId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "UserInput",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`inputId` INTEGER PRIMARY KEY AUTOINCREMENT, `pageId` INTEGER, `userResponse` TEXT, `description` TEXT NOT NULL, `isMandatory` INTEGER NOT NULL, FOREIGN KEY(`pageId`) REFERENCES `Page`(`pageId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "inputId",
+            "columnName": "inputId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pageId",
+            "columnName": "pageId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userResponse",
+            "columnName": "userResponse",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isMandatory",
+            "columnName": "isMandatory",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "inputId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Page",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pageId"
+            ],
+            "referencedColumns": [
+              "pageId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Questionnaire",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activityId` INTEGER NOT NULL, `questionnaireRemoteId` INTEGER NOT NULL, `projectId` INTEGER NOT NULL, `type` TEXT NOT NULL, `isCompleted` INTEGER NOT NULL, `questionnaireId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, FOREIGN KEY(`activityId`) REFERENCES `Activity`(`activityId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "activityId",
+            "columnName": "activityId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionnaireRemoteId",
+            "columnName": "questionnaireRemoteId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "projectId",
+            "columnName": "projectId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCompleted",
+            "columnName": "isCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionnaireId",
+            "columnName": "questionnaireId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "questionnaireId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Activity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "activityId"
+            ],
+            "referencedColumns": [
+              "activityId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LandSurvey",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activityId` INTEGER NOT NULL, `measurementId` TEXT NOT NULL, `activityUUID` TEXT, `sequenceNumber` INTEGER NOT NULL, `corners` INTEGER NOT NULL, `isCompleted` INTEGER NOT NULL, `surveyId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, FOREIGN KEY(`activityId`) REFERENCES `Activity`(`activityId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "activityId",
+            "columnName": "activityId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measurementId",
+            "columnName": "measurementId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activityUUID",
+            "columnName": "activityUUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sequenceNumber",
+            "columnName": "sequenceNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "corners",
+            "columnName": "corners",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCompleted",
+            "columnName": "isCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "surveyId",
+            "columnName": "surveyId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "surveyId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Activity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "activityId"
+            ],
+            "referencedColumns": [
+              "activityId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Photos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`surveyId` INTEGER, `treeMeasurementId` INTEGER, `photoUUID` TEXT NOT NULL, `measurementUUID` TEXT, `imagePath` TEXT NOT NULL, `imageType` TEXT, `photoId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` TEXT, `resolution` TEXT, `gpsCoordinates` TEXT, `gpsAccuracy` REAL NOT NULL, `stepsTaken` TEXT, `azimuth` TEXT, `cameraOrientation` TEXT, `flashLight` INTEGER NOT NULL, FOREIGN KEY(`surveyId`) REFERENCES `LandSurvey`(`surveyId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`treeMeasurementId`) REFERENCES `TMEntity`(`treeMeasurementId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "surveyId",
+            "columnName": "surveyId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "treeMeasurementId",
+            "columnName": "treeMeasurementId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photoUUID",
+            "columnName": "photoUUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measurementUUID",
+            "columnName": "measurementUUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imagePath",
+            "columnName": "imagePath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageType",
+            "columnName": "imageType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photoId",
+            "columnName": "photoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metaData.timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metaData.resolution",
+            "columnName": "resolution",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metaData.gpsCoordinates",
+            "columnName": "gpsCoordinates",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metaData.gpsAccuracy",
+            "columnName": "gpsAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metaData.stepsTaken",
+            "columnName": "stepsTaken",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metaData.azimuth",
+            "columnName": "azimuth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metaData.cameraOrientation",
+            "columnName": "cameraOrientation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metaData.flashLight",
+            "columnName": "flashLight",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "photoId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "LandSurvey",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "surveyId"
+            ],
+            "referencedColumns": [
+              "surveyId"
+            ]
+          },
+          {
+            "table": "TMEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "treeMeasurementId"
+            ],
+            "referencedColumns": [
+              "treeMeasurementId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "UploadQueue",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activityId` INTEGER NOT NULL, `activityData` TEXT NOT NULL, `dataBytes` INTEGER NOT NULL, `type` TEXT NOT NULL, `forUpload` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "activityId",
+            "columnName": "activityId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activityData",
+            "columnName": "activityData",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataBytes",
+            "columnName": "dataBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "forUpload",
+            "columnName": "forUpload",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TMEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activityId` INTEGER, `forestInventoryId` INTEGER, `measurementUUID` TEXT NOT NULL, `activityUUID` TEXT, `numberOfAttempts` INTEGER NOT NULL, `treeDiameter` REAL, `specie` TEXT, `duration` INTEGER, `measurement_type` TEXT, `treePolygon` TEXT, `cardPolygon` TEXT, `carbonDioxide` TEXT, `manualDiameter` TEXT, `stages` TEXT, `treeHealth` TEXT, `treeHeightMm` INTEGER, `comment` TEXT, `treeMeasurementId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "activityId",
+            "columnName": "activityId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "forestInventoryId",
+            "columnName": "forestInventoryId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "measurementUUID",
+            "columnName": "measurementUUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activityUUID",
+            "columnName": "activityUUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "numberOfAttempts",
+            "columnName": "numberOfAttempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "treeDiameter",
+            "columnName": "treeDiameter",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "specie",
+            "columnName": "specie",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "measurement_type",
+            "columnName": "measurement_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "treePolygon",
+            "columnName": "treePolygon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardPolygon",
+            "columnName": "cardPolygon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carbonDioxide",
+            "columnName": "carbonDioxide",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "manualDiameter",
+            "columnName": "manualDiameter",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stages",
+            "columnName": "stages",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "treeHealth",
+            "columnName": "treeHealth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "treeHeightMm",
+            "columnName": "treeHeightMm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "comment",
+            "columnName": "comment",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "treeMeasurementId",
+            "columnName": "treeMeasurementId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "treeMeasurementId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ForestInventoryEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activityId` INTEGER NOT NULL, `status` INTEGER NOT NULL, `forestInventoryId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "activityId",
+            "columnName": "activityId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "forestInventoryId",
+            "columnName": "forestInventoryId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "forestInventoryId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TreeSpecieEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `code` TEXT NOT NULL, `isActive` INTEGER NOT NULL, `version` REAL NOT NULL, `latinName` TEXT NOT NULL, `trivialName` TEXT NOT NULL, `iconURL` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latinName",
+            "columnName": "latinName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trivialName",
+            "columnName": "trivialName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iconURL",
+            "columnName": "iconURL",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'faabf170e72fe9fa4ac23904a094bb9b')"
+    ]
+  }
+}
